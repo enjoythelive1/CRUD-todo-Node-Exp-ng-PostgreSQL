@@ -25,12 +25,13 @@ var bodyParser = require('body-parser');						//needed to read HTTP packet conte
 var path = require('path');
 var http = require('http');
 var colours = require('colors');
+var passport = require("passport");
 
 
 /* ========================================================== 
 Internal App Modules/Packages Required
 ============================================================ */
-var routes = require('./server/routes.js');						//Exchange routes & DB Queries 
+var routes = require('./server/routes.js');
 
 /* ========================================================== 
 Create a new application with Express
@@ -56,12 +57,15 @@ app.use(logger('dev')); 	//log every request to the console
 // parse application/json
 app.use(bodyParser.json()) //Get info from $HTTP POST/PUT packets - needed for req.body
 
+/*===========================================================
+Initialized passport to enable passport Authentication
+=========================================================== */
+app.use(passport.initialize());
 
 /* ========================================================== 
 ROUTES - using Express
 ============================================================ */
 routes(app);
-
 
 /* ========================================================== 
 Create HTTP Server using Express

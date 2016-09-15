@@ -1,0 +1,49 @@
+<md-card class="body-card">
+    <md-card-header>
+        <md-card-header-text>
+            <span class="md-headline">Register</span>
+        </md-card-header-text>
+    </md-card-header>
+    <md-card-content>
+
+        <form name="registerForm" novalidate>
+
+            <md-input-container class="md-block">
+                <label>Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" ng-model="user.username"
+                       required md-no-asterisk>
+                <div ng-messages="registerForm.username.$error">
+                    <div ng-message="required">This field is required.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" ng-model="user.email" required
+                       md-no-asterisk>
+                <div ng-messages="registerForm.email.$error">
+                    <div ng-message="required">This field is required.</div>
+                    <div ng-message="email">The email is invalid.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" ng-model="user.password"
+                       required md-no-asterisk>
+                <div ng-messages="registerForm.password.$error">
+                    <div ng-message="required">This field is required.</div>
+                </div>
+            </md-input-container>
+
+            <md-button class="md-raised md-primary" ng-click="register()" ng-disabled="registerForm.$invalid">Register
+            </md-button>
+
+        </form>
+        <p class="md-caption text-center">
+            Do you have an account?
+            <md-button href="/login">Login</md-button>
+        </p>
+
+    </md-card-content>
+</md-card>

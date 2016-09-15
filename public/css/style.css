@@ -1,30 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
 
-html { 
-	overflow-y:scroll; 
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
 
-body {
-	padding-top:50px; 
+md-list-item md-input-container {
+    width: 100%;
 }
 
-#todo-list { 
-	margin-bottom:30px; 
+.text-center {
+    text-align: center;
 }
 
-#todo-form { 
-	margin-bottom:50px; 
+.body-card {
+    max-width: 900px;
 }
 
-input {
-	border: none;
-}
-
-
-.doneClass {
-	text-decoration: line-through;
-	color: red;
-}
-
-.notDoneClass {
-	color: green;
+.todo .uploading {
+    width: 24px;
+    padding: 8px;
+    margin-left: 6px;
 }

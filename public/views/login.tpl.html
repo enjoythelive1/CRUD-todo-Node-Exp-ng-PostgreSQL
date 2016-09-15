@@ -1,0 +1,34 @@
+<md-card class="body-card">
+    <md-card-header>
+        <md-card-header-text>
+            <span class="md-headline">Login</span>
+        </md-card-header-text>
+    </md-card-header>
+    <md-card-content>
+
+
+        <form name="loginForm" novalidate>
+            <md-input-container class="md-block">
+                <label>Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" ng-model="credentials.username"
+                       required md-no-asterisk>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Password</label>
+                <input type="password" id="password" name="password" placeholder="Password"
+                       ng-model="credentials.password" required md-no-asterisk>
+            </md-input-container>
+
+            <md-button class="md-raised md-primary" ng-click="login()" ng-disabled="loginForm.$invalid">Login
+            </md-button>
+
+        </form>
+        <p class="md-caption text-center">
+            Don't you have an account?
+            <md-button href="/register">Register</md-button>
+        </p>
+
+
+    </md-card-content>
+</md-card>
